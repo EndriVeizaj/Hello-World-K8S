@@ -8,10 +8,10 @@ delete:
 	kubectl delete deployment flaskapp-deployment
 
 scale:
-	kubectl scale deployment flaskapp-deployment --replicas= 5
+	kubectl scale deployment flaskapp-deployment --replicas=4
 
 forward:
-	kubectl port-forward svc/flaskapp-service 8080:5002
+	kubectl port-forward svc/flaskapp-service 8080:5000
 
 all:
 	kubectl apply -f magic_things.yaml
